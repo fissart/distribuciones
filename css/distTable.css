@@ -8,7 +8,6 @@ table.distribution {
 
 table.distribution caption {
     color: #9ba9b4;
-    font-size: .94em;
     letter-spacing: .1em;
     margin: 1em 0 0 0;
     padding: 0;
@@ -17,7 +16,7 @@ table.distribution caption {
 }
 
 table.distribution tr.odd td {
-    background: #f7fbff
+    background: #96b1cc
 }
 
 table.distribution tr.odd .column1 {
