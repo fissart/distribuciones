@@ -23,17 +23,17 @@
  </head>
 
 <body>
+<h1>Distribuciones de probabilidad</h1>
 
-Continuous
 <div id="continuous_distributionsdiv"></div>
 
-Discrete
+<h1>Discrete</h1>
 <div id="discrete_distributionsdiv"></div>
 
-Multivariate
+<h1>Multivariate</h1>
 <div id="multivariate_distributionsdiv"></div>
 
-Master
+<h1>Master</h1>
 <div id="master_distributionsdiv"></div>
 
 <script type="text/javascript">
@@ -41,9 +41,9 @@ Master
     window.addEvent('domready', function () {
 		
 		makeSortedTable("discrete","Table of discrete distributions.");
-		makeSortedTable("continuous");
-		makeSortedTable("multivariate");
-		makeSortedTable("master");
+		makeSortedTable("continuous","continuous1");
+		makeSortedTable("multivariate","continuous2");
+		makeSortedTable("master","continuous3" );
         milkbox = new Milkbox({ centered:true });
         
     });
