@@ -206,7 +206,7 @@ var normalMeanStandardDeviation = new distributionParametrization(
 
 distributions["normal"] = new distribution(
   "normal",
-  "Normal/Gaussian",
+  "Normal-Gaussiano",
   "continuous",
   [normalMeanVariance, normalMeanPrecision, normalMeanStandardDeviation],
   null,
@@ -414,7 +414,7 @@ var invgammaShapeScale = new distributionParametrization(
 
 distributions["invgamma"] = new distribution(
   "invgamma",
-  "Inverse Gamma",
+  "Gamma inverso",
   "continuous",
   [invgammaShapeScale],
   null,
@@ -680,7 +680,7 @@ var studenttLocationScale = new distributionParametrization(
 
 distributions["studentt"] = new distribution(
   "studentt",
-  "Student's t",
+  "t Student's",
   "continuous",
   [studenttLocationScale],
   null,
@@ -760,7 +760,7 @@ var chisqScalePar = new distributionParametrization(
 
 distributions["chisquare"] = new distribution(
   "chisquare",
-  "Chi-squared",
+  "Chi-cuadrado",
   "continuous",
   [chisqScalePar],
   null,
@@ -1103,7 +1103,7 @@ var weibullShiftShapeRate = new distributionParametrization(
 
 distributions["weibull"] = new distribution(
   "weibull",
-  "three-parameter Weibull",
+  "Weibull de tres parámetros",
   "continuous",
   [weibullShiftShapeScale, weibullShiftShapeRate],
   null,
@@ -1320,7 +1320,7 @@ var negbinomialrp = new distributionParametrization(
 
 distributions["negativebinomial"] = new distribution(
   "negativebinomial",
-  "Negative binomial",
+  "Binomial negativo",
   "discrete",
   [negbinomialrp],
   null,
