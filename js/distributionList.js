@@ -15,7 +15,7 @@ var normalMean = new unboundedParameter(
 
 var normalVariance = new positiveParameter(
 	"sigma2",
-	"\\sigma^2",
+	"\\sigma^{2w}",
 	function() { return [0.1,10]; },
 	true,
 	1,
@@ -154,7 +154,7 @@ distributions["normal"] = new distribution(
 	[ normalMeanVariance, normalMeanPrecision, normalMeanStandardDeviation],
 	null,
 	{ 
-		name:"Wikipedia",
+		name:"Wikipedia-web",
 		link:"http://en.wikipedia.org/wiki/Normal_distribution"
 	}
 );

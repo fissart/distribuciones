@@ -4,20 +4,20 @@ var plotOptions = [];
 var sliderPoints = 101;
 var roundDigits = 3;
 var updateTime = 100;
-var areaFillColor="rgba(0,200,0,.3)";
+var areaFillColor="rgb(209, 104, 58)";
 
 plotOptions["pdf"] = { 
 				yaxis: { min:0 }, 
-				colors: ["rgb(0,200,0)", "rgb(200,0,0)","rgb(150,150,150)","rgb(150,150,150)", "rgb(0,200,0)"], 
+				colors: ["rgb(50, 86, 121)", "rgb(0, 62, 200)","rgb(150,150,150)","rgb(150,150,150)", "rgb(0,200,0)"], 
 				series: {
-					points: { fillColor: "rgb(0,200,0)"}
+					points: { fillColor: "rgb(200, 0, 15)"}
 					},
-				grid: { hoverable: true, clickable: true },
+				grid: { hoverable: false, clickable: true },
 				crosshair: { mode: "x" }
 				};
 plotOptions["cdf"] = { 
 				yaxis: { min:0, max: 1.001},
-				colors: ["rgb(0,0,0)", "rgb(200,0,0)", "rgb(150,150,150)","rgb(150,150,150)", "rgb(0,200,0)"],
+				colors: ["rgb(0,0,0)", "rgb(0, 8, 200)", "rgb(150,150,150)","rgb(150,150,150)", "rgb(0,200,0)"],
 				series: {
 					points: { fillColor: "rgb(0,200,0)"}
 					},
@@ -65,9 +65,9 @@ function showTooltip(x, y, contents) {
         display: 'none',
         top: y - 30,
         left: x + 10,
-        border: '1px solid #fdd',
-        padding: '2px',
-        'background-color': '#fee',
+        border: '1px solid #b9322b',
+        padding: '20px',
+        'background-color': '#2b96b9',
         opacity: 0.80,
         'font-family': 'sans-serif'
     }).appendTo("body").fadeIn(0);

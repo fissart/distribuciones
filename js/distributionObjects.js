@@ -451,7 +451,7 @@ function refTableRow(odd, type){
 		new Element('a', {
 	    	href: "distributionDisplay.html?dist="+this.name,
    		 	id: idPre + "_interactlink",
-    		html: "Interact",
+    		html: "Interactuar",
 			title: "The "+this.label+" distribution",
 			'data-milkbox-size': "width:650,height:370",
 			'data-milkbox': "dist"
