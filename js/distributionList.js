@@ -67,7 +67,7 @@ var normalMeanVariance = new distributionParametrization(
   function (x, mu, sig2) {
     return jStat.normal.pdf(x, mu, Math.sqrt(sig2));
   },
-  "\\left(2\\pi\\sigma^2\\right)^{-\\frac{1}{2}}\\exp\\left\\{-\\frac{1}{2\\sigma^2}\\left(x-\\mu\\right)^2\\right\\}",
+  "\\left(2\\pi\\sigma^2\\right)^{-\\frac{1}{2}}e^{-\\frac{1}{2\\sigma^2}\\left(x-\\mu\\right)^2}",
   function (x, mu, sig2) {
     return jStat.normal.cdf(x, mu, Math.sqrt(sig2));
   },
@@ -117,7 +117,7 @@ var normalMeanPrecision = new distributionParametrization(
   function (x, mu, tau) {
     return jStat.normal.pdf(x, mu, Math.sqrt(1 / tau));
   },
-  "\\left(\\frac{\\tau}{2\\pi}\\right)^{\\frac{1}{2}}\\exp\\left\\{-\\frac{\\tau}{2}\\left(x-\\mu\\right)^2\\right\\}",
+  "\\left(\\frac{\\tau}{2\\pi}\\right)^{\\frac{1}{2}}e^{-\\frac{\\tau}{2}\\left(x-\\mu\\right)^2}",
   function (x, mu, tau) {
     return jStat.normal.cdf(x, mu, Math.sqrt(1 / tau));
   },
@@ -167,7 +167,7 @@ var normalMeanStandardDeviation = new distributionParametrization(
   function (x, mu, sig) {
     return jStat.normal.pdf(x, mu, sig);
   },
-  "\\left(2\\pi\\sigma^2\\right)^{-\\frac{1}{2}}\\exp\\left\\{-\\frac{1}{2\\sigma^2}\\left(x-\\mu\\right)^2\\right\\}",
+  "\\left(2\\pi\\sigma^2\\right)^{-\\frac{1}{2}}e^{-\\frac{1}{2\\sigma^2}\\left(x-\\mu\\right)^2}",
   function (x, mu, sig) {
     return jStat.normal.cdf(x, mu, sig);
   },
@@ -270,7 +270,7 @@ var gammaShapeScale = new distributionParametrization(
   },
   "(0,\\infty)",
   jStat.gamma.pdf,
-  "\\frac{1}{\\Gamma(k)s^{k}} x^{k - 1} \\exp\\left\\{-\\frac{x}{s}\\right\\}",
+  "\\frac{1}{\\Gamma(k)s^{k}} x^{k - 1}e^{-\\frac{x}{s}}",
   jStat.gamma.cdf,
   null,
   function (k, s) {
@@ -306,7 +306,7 @@ var gammaShapeRate = new distributionParametrization(
   function (x, k, theta) {
     return jStat.gamma.pdf(x, k, 1 / theta);
   },
-  "\\frac{\\theta^k}{\\Gamma(k)} x^{k - 1} \\exp\\left\\{-\\theta x\\right\\}",
+  "\\frac{\\theta^k}{\\Gamma(k)} x^{k - 1} e^{-\\theta x}",
   function (x, k, theta) {
     return jStat.gamma.cdf(x, k, 1 / theta);
   },
@@ -389,7 +389,7 @@ var invgammaShapeScale = new distributionParametrization(
   },
   "(0,\\infty)",
   jStat.invgamma.pdf,
-  "\\frac{\\beta^{\\alpha}}{\\Gamma(\\alpha)} x^{-\\alpha - 1} \\exp\\left\\{-\\frac{\\beta}{x}\\right\\}",
+  "\\frac{\\beta^{\\alpha}}{\\Gamma(\\alpha)} x^{-\\alpha - 1} e^{-\\frac{\\beta}{x}}",
   jStat.invgamma.cdf,
   null,
   function (alpha, beta) {
@@ -733,7 +733,7 @@ var chisqScalePar = new distributionParametrization(
   function (x, nu, sig) {
     return jStat.chisquare.pdf(x / sig, nu) / sig;
   },
-  "\\frac{1}{(2\\sigma)^\\frac{\\nu}{2}\\Gamma\\left(\\frac{\\nu}{2}\\right)}x^{\\frac{\\nu}{2}-1}\\exp\\left\\{-\\frac{x}{2\\sigma}\\right\\}",
+  "\\frac{1}{(2\\sigma)^\\frac{\\nu}{2}\\Gamma\\left(\\frac{\\nu}{2}\\right)}x^{\\frac{\\nu}{2}-1}e^{-\\frac{x}{2\\sigma}}",
   function (x, nu, sig) {
     return jStat.chisquare.cdf(x / sig, nu);
   },
@@ -893,7 +893,7 @@ var lognormalMeanVariance = new distributionParametrization(
   function (x, mu, sig2) {
     return jStat.lognormal.pdf(x, mu, Math.sqrt(sig2));
   },
-  "\\left(\\pi\\sigma^2x^2\\right)^{-\\frac{1}{2}}\\exp\\left\\{-\\frac{1}{2\\sigma^2}\\left(\\log(x)-\\mu\\right)^2\\right\\}",
+  "\\left(\\pi\\sigma^2x^2\\right)^{-\\frac{1}{2}}e^{-\\frac{1}{2\\sigma^2}\\left(\\log(x)-\\mu\\right)^2}",
   function (x, mu, sig2) {
     return jStat.lognormal.cdf(x, mu, Math.sqrt(sig2));
   },
@@ -912,8 +912,7 @@ var lognormalMeanVariance = new distributionParametrization(
       fun: function (mu, sig2) {
         return jStat.lognormal.variance(mu, Math.sqrt(sig2));
       },
-      display:
-        "\\left(e^{\\sigma^2}-1\\right)\\exp\\left\\{2\\mu + \\sigma^2\\right\\}",
+      display: "\\left(e^{\\sigma^2}-1\\right)e^{2\\mu + \\sigma^2}",
     },
     median: {
       fun: function (mu, sig2) {
@@ -1012,7 +1011,7 @@ var weibullShiftShapeScale = new distributionParametrization(
   function (x, x0, s, k) {
     return jStat.weibull.pdf(x - x0, s, k);
   },
-  "\\frac{k}{s}\\left(\\frac{x-x_0}{s}\\right)^{k-1} \\exp\\left\\{-\\left(\\frac{x-x_0}{s}\\right)^k\\right\\}",
+  "\\frac{k}{s}\\left(\\frac{x-x_0}{s}\\right)^{k-1} e^{-\\left(\\frac{x-x_0}{s}\\right)^k}",
   function (x, x0, s, k) {
     return jStat.weibull.cdf(x - x0, s, k);
   },
@@ -1063,7 +1062,7 @@ var weibullShiftShapeRate = new distributionParametrization(
   function (x, x0, theta, k) {
     return jStat.weibull.pdf(x - x0, 1 / theta, k);
   },
-  "k\\theta\\left(x\\theta\\right)^{k-1} \\exp\\left\\{-\\left(\\theta(x-x_0)\\right)^k\\right\\}",
+  "k\\theta\\left(x\\theta\\right)^{k-1} e^{-\\left(\\theta(x-x_0)\\right)^k}",
   function (x, x0, theta, k) {
     return jStat.weibull.cdf(x - x0, 1 / theta, k);
   },
@@ -1221,7 +1220,7 @@ var poissonRate = new distributionParametrization(
   },
   "[0,\\infty)",
   jStat.poisson.pdf,
-  "\\frac{\\lambda^x}{x!} \\exp\\left\\{-\\lambda\\right\\}",
+  "\\frac{\\lambda^x}{x!}e^{-\\lambda}",
   jStat.poisson.cdf,
   "gamma",
   function (lambda) {
