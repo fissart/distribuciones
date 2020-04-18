@@ -21,7 +21,7 @@ table.distribution tr.odd td {
 }
 
 table.distribution tr.odd .column1 {
-    background: #f4f9fe;
+    background: #96b1cc;
 }
 
 table.distribution .column1 {
@@ -47,7 +47,7 @@ table.distribution th {
 }
 
 table.distribution thead th {
-    background: #3e6c99;
+    background: #99583e;
     text-align: center;
     border-radius: 10px;
     font: bold serif;
@@ -56,7 +56,7 @@ table.distribution thead th {
 
 table.distribution tfoot th {
     text-align: center;
-    background: #030303;
+    background: #961313;
 }
 
 table.distribution tfoot th strong {
