@@ -15,7 +15,7 @@
 
     /* CSS3 styling for latest browsers */
     -moz-box-shadow: 0 0 90px 5px #000;
-    -webkit-box-shadow: 0 0 90px #000;
+    -webkit-box-shadow: 0 0 90px rgb(136, 121, 121);
 }
 
 /* close button positioned on upper right corner */
