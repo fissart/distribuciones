@@ -4,17 +4,11 @@ var plotOptions = [];
 var sliderPoints = 101;
 var roundDigits = 3;
 var updateTime = 100;
-var areaFillColor = "#4EC5F1";
+var areaFillColor = "#C62828";
 
 plotOptions["pdf"] = {
   yaxis: { min: 0 },
-  colors: [
-    "rgb(0,20,0)",
-    "rgb(200,0,0)",
-    "rgb(0,1,0)",
-    "rgb(150,150,150)",
-    "rgb(0,20,0)",
-  ],
+  colors: ["rgb(0,20,0)", "#F06292", "#29B6F6", "#29B6F6", "rgb(0,20,0)"],
   series: {
     points: { fillColor: "rgb(0,200,0)" },
   },

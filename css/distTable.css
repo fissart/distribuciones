@@ -1,3 +1,17 @@
+* {
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    width: 50%;
+    margin: 30px auto;
+    background: #66a3d3;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 table.distribution {
     width: 90%;
     border-top: 1px solid #e5eff8;
@@ -7,10 +21,8 @@ table.distribution {
 }
 
 table.distribution caption {
-    color: #9ba9b4;
-    letter-spacing: .1em;
-    margin: 1em 0 0 0;
-    padding: 0;
+    color: #c05915;
+    padding: 5px;
     caption-side: top;
     text-align: center;
 }
