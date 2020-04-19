@@ -6,7 +6,7 @@
 h1 {
     width: 50%;
     margin: 30px auto;
-    background: #66a3d3;
+    background: #569797;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
@@ -28,7 +28,7 @@ table.distribution caption {
 }
 
 table.distribution tr.odd td {
-    background: #96b1cc
+    background: #267c627c
 }
 
 table.distribution tr.odd .column1 {
