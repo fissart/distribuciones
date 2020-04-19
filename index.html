@@ -42,7 +42,67 @@
     <script type="text/javascript" src="js/distributionList.js"></script>
   </head>
 
+  <!--adicional-->
+
+  <!--mathjax-->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      var src = "true";
+      if (src === "" || src === "true")
+        src =
+          "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+      if (location.protocol !== "file:")
+        if (/^https?:/.test(src)) src = src.replace(/^https?:/, "");
+      script.src = src;
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: {
+                autoNumber: "AMS"
+            }
+        },
+        "HTML-CSS": {
+            availableFonts: ["Tex"]
+        }
+    });
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="main.css" />
   <body>
+    <!--adicional-->
+    <header class="logotipo">
+      <h1>
+        Mi first primera Página \(\sum_1^{\infty}\)
+        <img src="screenshots/wwwhite.svg" width="70" alt="" />
+      </h1>
+
+      <!--
+    <a href="logo">
+        <img src="screenshots/wwblack.svg" width="70" alt="">
+    </a>
+    -->
+      <nav class="icono">
+        <a href="#" id="menu">
+          <i class="fa fa-bars"></i>
+        </a>
+
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Acerca</a></li>
+          <li><a href="maths.html">Matemáticas</a></li>
+          <li><a href="#">Algoritmos</a></li>
+          <li><a href="#">Graphics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--adicional-->
+
     <h1>Continuo</h1>
     <div id="continuous_distributionsdiv"></div>
 

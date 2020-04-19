@@ -1,0 +1,166 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: black;
+        font-size: 2em;
+        text-align: center;
+        # background-color: aliceblue;
+
+    }
+
+    h2 {
+        padding: 1%;
+        color: brow;
+        text-align: left;
+        # background-color: grey;
+        border: 1px solid white;
+        border-radius: 3px 3px;
+        border-spacing: 15px;
+        display: block;
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: ;
+        margin-right: 0;
+    }
+
+    h3 {
+        padding: 1%;
+        color: black;
+        text-align: left;
+        font-size: 1.17em;
+        border: 1px solid #775323;
+        border-radius: 3px 3px;
+        border-spacing: 15px;
+        # background-color: aliceblue;
+    }
+
+
+    p {
+        font-family: serif;
+        text-align: justify;
+        text-justify: inter-word;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    p.a {
+        word-break: normal;
+    }
+
+    p.b {
+        word-break: keep-all;
+    }
+
+    p.c {
+        word-break: break-all;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+
+    header h1 {
+        background-color: #000000;
+        background-image: url(screenshots/w7.jpg);
+        background-position: 30% 65%;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: aliceblue;
+        padding: 5%;
+    }
+
+
+    body {
+        width: 90%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 5px;
+        font: bold 30px serif;
+        #overflow: hidden
+    }
+
+    header nav ul {
+        list-style: none;
+    }
+
+    header nav ul li {
+        border: 1px solid black;
+        border-radius: 5px;
+     background:#24a8b7;
+#        margin: 15px 0 15px 0;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #534227
+    }
+
+    a:hover {
+        color: #ffffff;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .main {
+        width: 70%;
+        float: left;
+        # border: 1px solid red;
+        # background: green
+    }
+
+    article {
+        padding: 10px;
+        border-radius: 12px;
+        background: #4a9682;
+        margin-top: 10px;
+        margin-bottom: 1%;
+
+    }
+
+    aside {
+        width: 29.0%;
+        float: right
+    }
+
+    blockquote {
+        # border: 1px solid black;
+        border-radius: 10px;
+        background-color: #308e91;
+        padding: 6%;
+        margin-top: 10px;
+        # margin-bottom: 0%;
+    }
+
+    nav {
+        float: center;
+    }
+
+    footer {
+        clear: both;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        margin-top: 100px;
+        background: #89c791;
+    }
+
+    .slider {
+        text-align: center;
+        display: block;
+    }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MathJax Test Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="screenshots/ww.ico">
+    <meta charset="utf-8">
+    <!--mathjax-->
+    <script>
+        (function() {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            var src = "true";
+            if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+            if (location.protocol !== "file:")
+                if (/^https?:/.test(src))
+                    src = src.replace(/^https?:/, '');
+            script.src = src;
+            document.getElementsByTagName("head")[0].appendChild(script);
+        })();
+    </script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: {
+                equationNumbers: {
+                    autoNumber: "AMS"
+                }
+            },
+            "HTML-CSS": {
+                availableFonts: ["Tex"]
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="logotipo">
+        <h1>Mi first primera Página \(\sum_1^{\infty}\)
+            <img src="screenshots/wwwhite.svg" width="70" alt="">
+        </h1>
+        
+<!--
+<a href="logo">
+    <img src="screenshots/wwblack.svg" width="70" alt="">
+</a>
+-->
+        <nav class="icono">
+            <a href="#" id="menu">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <ul>
+                <li><a href="index.html">Inicio</a>
+                </li>
+                <li><a href="about.html">Acerca</a>
+                </li>
+                <li><a href="maths.html">Matemáticas</a>
+                </li>
+                <li><a href="#">Algoritmos</a>
+                </li>
+                <li><a href="#">Graphics</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+</body></html>
+
+<div id="header"></div>
+
+<section class="main">
+
+   
+   
+    <article>
+
+        with equation* environment: \begin{equation*} x+1\over\sqrt{1-x^2} \end{equation*} This is a forward reference \eqref{ref3} and another \eqref{ref2} for the following equation: $$x+1\over\sqrt{1-x^2}$$ More math: $$x+1\over\sqrt{1-x^2}$$ Here is a ref inside math: \(\ref{ref3}+1\) and text after it. 
+        
+        \begin{align*} x& = y_1-y_2+y_3-y_5+y_8-\dots && \text{by \eqref{ref3}}\notag\\ & = y'\circ y^* && \text{(by \eqref{ref3})}\\ & = y(0) y' && \text {by Axiom 1.} \end{align*} Here's a bad ref [\ref{ref3}]
+        
+          to a nonexistent label. An alignment: \begin{align} a&=b\label{ref3}\cr &=c+d \end{align} and a starred one: \begin{align*} a&=b\cr &=c+d \end{align*}
+    </article>
+
+
+    <article>
+
+        Here's one using the equation environment: \begin{equation}\label{ref2} x+1\over\sqrt{1-x^2} \end{equation} and one with equation* environment: \begin{equation*} x+1\over\sqrt{1-x^2} \end{equation*} This is a forward reference \eqref{ref3} and another \eqref{ref2} for the following equation: $$x+1\over\sqrt{1-x^2}$$ More math: $$x+1\over\sqrt{1-x^2}$$ Here is a ref inside math: \(\ref{ref3}+1\) and text after it. \begin{align*} x& = y_1-y_2+y_3-y_5+y_8-\dots && \text{by \eqref{ref3}}\notag\\ & = y'\circ y^* && \text{(by \eqref{ref3})}\\ & = y(0) y' && \text {by Axiom 1.} \end{align*} Here's a bad ref [\ref{ref3}] to a nonexistent label. An alignment: \begin{align} a&=b\label{ref3}\cr &=c+d \end{align} and a starred one: \begin{align*} a&=b\cr &=c+d \end{align*}
+        </article>
+</section>
+
+
+<div id="footer"></div>
+</body>
+
+</html>
