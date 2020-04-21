@@ -61,7 +61,7 @@ var normalMeanVariance = new distributionParametrization(
     return [Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY];
   },
   function (mu, sig2) {
-    return [-10, 10];
+    return [-15, 15];
   },
   "(-\\infty,\\infty)",
   function (x, mu, sig2) {
